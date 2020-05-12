@@ -1,0 +1,87 @@
+.studio {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+@media (max-width: 500px) {
+    .studio__preview,
+    .studio__result {
+        width: 100%;
+    }
+}
+
+.studio__preview-box {
+    position: relative;
+}
+
+.studio__preview-box::before {
+    content: "\2022\00a0\00a0Recording";
+    position: absolute;
+    left: 50%;
+    top: -4rem;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    background: rgba(233, 58, 58, 0.767);
+    color: #fff;
+    border-radius: 50px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.studio__error {
+    text-align: center;
+}
+
+.error__gif {
+    margin-bottom: 2rem;
+    border: 2rem solid rgba(255, 255, 255, .15)
+}
+
+@media (max-width: 500px) {
+    .error__gif {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+.error__msg {
+    font-size: 2rem;
+}
+
+.studio__result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.success__text {
+    margin-bottom: 2rem;
+    color: #fff;
+    font-size: 2rem;
+    font-style: italic;
+    padding: .5rem 2rem;
+    background: rgba(255, 255, 255, .1);
+}
+
+.success__gif {
+    border: 2rem solid rgba(255, 255, 255, .15);
+    cursor: pointer;
+}
+

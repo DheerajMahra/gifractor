@@ -1,0 +1,30 @@
+.details {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details__head {
+    font-size: 4.3rem;
+    margin-bottom: 15rem;
+    background: #fff;
+    padding: 1rem 1.5rem;
+
+}
+
+.details__input {
+    width: 100%;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+    border-width: 0 0 .2rem 0;
+}
+
+.details__input:active,
+.details__input:focus {
+    outline: none;
+}
+
+.details__input:focus {
+    border-bottom: .2rem solid #e1a21c;
+}

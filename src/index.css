@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*::selection {
+  background: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  line-height: 1.2;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-image: linear-gradient(to bottom, #e1a21c 40%, #ffffff 40% 100%)
+}

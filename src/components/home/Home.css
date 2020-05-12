@@ -1,0 +1,26 @@
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home__box {
+    position: relative;
+    text-align: center;
+}
+
+.home__gif {
+    width: 100%;
+    margin-bottom: 2rem;
+    border: 2rem solid rgba(255, 255, 255, .15)
+}
+
+.home__head {
+    font-size: 8rem;
+}
+
+.home__sub-head {
+    font-size: 2rem;
+}
