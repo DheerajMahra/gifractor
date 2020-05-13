@@ -63,7 +63,7 @@ class Studio extends React.Component {
         .then(gif => {
             
             if (navigator.canShare && navigator.canShare({ files: [gif] })) {
-                navigator.share({ files: [gif] })
+                navigator.share({ files: gif })
                 .then(() => alert('Share was successful.'))
                 .catch((error) => alert('Sharing failed', error));
               } else {
@@ -71,7 +71,7 @@ class Studio extends React.Component {
               }
 
         })
-        .catch(error => alert(error))
+        .catch(error => alert('ouch', error))
     }
 
     render() {
