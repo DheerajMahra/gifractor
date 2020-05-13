@@ -44,10 +44,17 @@ class Studio extends React.Component {
     }
 
     base64ToFile = (url, filename, mimeType) => {
-        return (fetch(url)
-            .then(res => res.arrayBuffer())
-            .then(buf => new File([buf], filename,{type:mimeType}))
-        );
+        // return (fetch(url)
+        //     .then(res => res.arrayBuffer())
+        //     .then(buf => new File([buf], filename,{type:mimeType}))
+        // );
+        return fetch(url)
+        .then(res => res.blob())
+        .then(blob => {
+            const file = new File([blob], filename,{ type: mimeType })
+            return file
+        })
+        .catch(error => console.log('Error from base64fun', error))
     }
 
     handleShare = () => {
