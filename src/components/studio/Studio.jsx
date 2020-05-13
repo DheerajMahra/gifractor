@@ -43,6 +43,19 @@ class Studio extends React.Component {
         FileSaver.saveAs(this.state.gif, "meme")
     }
 
+    handleShare = () => {
+        if(navigator.canShare && navigator.canShare({ files: [this.state.gif] })) {
+            navigator.share({
+                files: [this.state.gif],
+                title: 'mygif',
+            })
+            .then(() => console.log('successfully shared.'))
+            .catch((error) => console.log('Sharing failed', error))
+        } else {
+            console.log('Your system doesn\'t support sharing files.')
+        }
+    }
+
     render() {
          return (
             <div className="studio">
@@ -75,6 +88,7 @@ class Studio extends React.Component {
                             alt="user gif"
                             onClick={this.handleSave}
                         />
+                        <Button to="/studio" click={this.handleShare}>Share</Button>
                         <Button to="/details">Record Again</Button>
                     </div> :
                     null

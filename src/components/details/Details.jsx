@@ -35,7 +35,7 @@ class Details extends React.Component {
                         />
                         <div style={{textAlign: "center"}}>
                             <Button
-                                to=""
+                                to="/details"
                                 click={this.handleSubmit}
                             >
                             Start Recording
