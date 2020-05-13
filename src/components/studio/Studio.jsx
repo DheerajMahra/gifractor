@@ -62,8 +62,8 @@ class Studio extends React.Component {
         this.base64ToFile(url, this.props.text, 'image/gif')
         .then(gif => {
             
-            if (navigator.canShare && navigator.canShare({ files: gif })) {
-                navigator.share({ files: gif })
+            if (navigator.canShare && navigator.canShare({ files: [gif] })) {
+                navigator.share({ files: [gif] })
                 .then(() => alert('Share was successful.'))
                 .catch((error) => alert('Sharing failed', error));
               } else {
